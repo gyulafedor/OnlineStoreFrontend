@@ -4,6 +4,7 @@ import { CartComponent } from './cart/cart.component';
 import { CreateAccountComponent } from './create-account/create-account.component';
 import { GamesComponent } from './games/games.component';
 import { LoginComponent } from './login/login.component';
+import { SuccessfulOrderPageComponent } from './successful-order-page/successful-order-page.component';
 
 const routes: Routes = [
   {
@@ -21,6 +22,10 @@ const routes: Routes = [
   {
     path: "",
     component: GamesComponent
+  },
+  {
+    path: "app-successful-order-page",
+    component: SuccessfulOrderPageComponent
   }
 ];
 

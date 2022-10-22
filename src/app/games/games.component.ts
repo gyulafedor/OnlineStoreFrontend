@@ -47,17 +47,10 @@ export class GamesComponent implements OnInit {dataSource: MatTableDataSource<Ga
         this.dataSource.paginator = this.paginator;
       }
     )
-    /*for(var i = 0; i < SampleJsonFile.length; i++){
-      var e = SampleJsonFile[i];
-      var processEntry = new Game(e.id, e.name, e.description, e.developer, e.publisher, e.price);
-      //console.log(processEntry);
-      this.entries.push(processEntry);
-    }
-    this.dataSource = new MatTableDataSource(this.entries);
-    this.dataSource.sort = this.sort;
-    this.dataSource.paginator = this.paginator;*/
   }
 
   addToCart(){
+    let userId = sessionStorage.getItem("email");
+    
   }
 }

@@ -1,11 +1,11 @@
 export class CartElement{
-    userEmail: string;
     gameName: string;
+    gameDescription: string;
     gamePrice: number;
 
-    constructor(userEmail: string, gameName: string, gamePrice: number){
-        this.userEmail = userEmail;
+    constructor(gameName: string, gameDescription: string, gamePrice: number){
         this.gameName = gameName;
+        this.gameDescription = gameDescription;
         this.gamePrice = gamePrice;
     }
 }

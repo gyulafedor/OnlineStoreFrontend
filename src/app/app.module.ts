@@ -17,6 +17,8 @@ import { CartComponent } from './cart/cart.component';
 import { LoginComponent } from './login/login.component';
 import { CreateAccountComponent } from './create-account/create-account.component';
 import { GamesComponent } from './games/games.component';
+import { AddGameComponent } from './add-game/add-game.component';
+import { SuccessfulOrderPageComponent } from './successful-order-page/successful-order-page.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,9 @@ import { GamesComponent } from './games/games.component';
     CartComponent,
     LoginComponent,
     CreateAccountComponent,
-    GamesComponent
+    GamesComponent,
+    AddGameComponent,
+    SuccessfulOrderPageComponent
   ],
   imports: [
     CommonModule,

@@ -5,6 +5,7 @@ import { MatTableDataSource } from '@angular/material/table';
 import { CartElement } from 'src/models/cartElement';
 import { MatSort } from '@angular/material/sort';
 import { MatPaginator } from '@angular/material/paginator';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-cart',
@@ -14,9 +15,10 @@ import { MatPaginator } from '@angular/material/paginator';
 export class CartComponent implements OnInit {
 
   dataSource: MatTableDataSource<CartElement>;
-  entries = [] as Array<CartElement>;
+  entries = [] as Array<CartElement>;  
+  getUserByIdUrl: string = environment.getUserByIdUrl;
 
-  processedColumns = ['userEmail', 'gameName', 'gamePrice'];
+  processedColumns = ['gameName', 'gameDescription', 'gamePrice'];
 
   @ViewChild(MatSort, {static: true}) sort: MatSort;
   @ViewChild(MatPaginator, {static: true}) paginator: MatPaginator;
@@ -33,7 +35,22 @@ export class CartComponent implements OnInit {
   }
 
   loadCart(){
-    
+    let userEmail = sessionStorage.getItem("email");
+    let urlToGetUsersCart = this.getUserByIdUrl.concat("/" + userEmail);
+    this.http.get(urlToGetUsersCart).subscribe(
+      (gamesInCart: any) => {
+        for(var i = 0; i < gamesInCart.length; i++){
+          var currentGame = gamesInCart[i];
+          var processEntry = new CartElement(currentGame.gameName, currentGame.gameDescription, currentGame.gamePrice);
+          console.log("pe: " + processEntry.gameName);
+          this.entries.push(processEntry);
+        }
+        this.dataSource = new MatTableDataSource(this.entries);
+        this.dataSource.sort = this.sort;
+        this.dataSource.paginator = this.paginator;
+      }
+
+    )
   }
 
 }

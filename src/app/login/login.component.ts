@@ -19,11 +19,8 @@ export class LoginComponent implements OnInit {
   }
 
   onLogin(parameters: {userEmail: string, userPassword: string}){
-    //let httpHeaders = new HttpHeaders().set("content-type", "text");
-    //let httpParam = new HttpParams().set("id", parameters.userEmail);
     let userUrl = this.getUserByIdUrl.concat("/" + parameters.userEmail);
-    //sessionStorage.setItem("email", parameters.userEmail);
-    this.http.get(userUrl/*, {"headers" : httpHeaders, params: httpParam}*/).subscribe(
+    this.http.get(userUrl).subscribe(
       (user: any) => {
         console.log(user);
         console.log("pe: " + parameters.userEmail + " \nue: " + user.password);
