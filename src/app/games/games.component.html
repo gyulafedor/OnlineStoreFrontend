@@ -5,35 +5,30 @@
   
 <div>
     <table mat-table [dataSource]="dataSource" matSort>
-  
-        <ng-container matColumnDef="gameId">
-          <th class="mat-header-gameId" mat-header-cell *matHeaderCellDef mat-sort-header>Game Id</th>
-          <td class="mat-td-gameId" mat-cell *matCellDef="let row">{{row.gameId}}</td>
-        </ng-container>
-  
-        <ng-container matColumnDef="gameName">
+    
+        <ng-container matColumnDef="name">
           <th class="mat-header-gameName" mat-header-cell *matHeaderCellDef mat-sort-header>Game Name</th>
-          <td class="mat-td-gameName" mat-cell *matCellDef="let row">{{row.gameName}}</td>
+          <td class="mat-td-gameName" mat-cell *matCellDef="let row">{{row.name}}</td>
         </ng-container>
   
-        <ng-container matColumnDef="gameDescription">
+        <ng-container matColumnDef="description">
           <th class="mat-header-gameDescription" mat-header-cell *matHeaderCellDef mat-sort-header>Game Description</th>
-          <td class="mat-td-gameDescription" mat-cell *matCellDef="let row">{{row.gameDescription}}</td>
+          <td class="mat-td-gameDescription" mat-cell *matCellDef="let row">{{row.description}}</td>
         </ng-container>
   
-        <ng-container matColumnDef="gameDeveloper">
+        <ng-container matColumnDef="developer">
           <th class="mat-header-gameDeveloper" mat-header-cell *matHeaderCellDef mat-sort-header>Game Developer</th>
-          <td class="mat-td-gameDeveloper" mat-cell *matCellDef="let row">{{row.gameDeveloper}}</td>
+          <td class="mat-td-gameDeveloper" mat-cell *matCellDef="let row">{{row.developer}}</td>
         </ng-container>
   
-        <ng-container matColumnDef="gamePubliser">
+        <ng-container matColumnDef="publisher">
           <th class="mat-header-gamePubliser" mat-header-cell *matHeaderCellDef mat-sort-header>Game Publisher</th>
-          <td class="mat-td-gamePubliser" mat-cell *matCellDef="let row">{{row.gamePubliser}}</td>
+          <td class="mat-td-gamePubliser" mat-cell *matCellDef="let row">{{row.publisher}}</td>
         </ng-container>
   
-        <ng-container matColumnDef="gamePrice">
+        <ng-container matColumnDef="price">
           <th class="mat-header-gamePrice" mat-header-cell *matHeaderCellDef mat-sort-header>Game Price ($)</th>
-          <td class="mat-td-gamePrice" mat-cell *matCellDef="let row">{{row.gamePrice}}</td>
+          <td class="mat-td-gamePrice" mat-cell *matCellDef="let row">{{row.price}}</td>
         </ng-container>
 
         <ng-container matColumnDef="addToCart">

@@ -1,17 +1,15 @@
 export class Game{
-    gameId: number;
-    gameName: string;
-    gameDescription: string;
-    gameDeveloper: string;
-    gamePubliser: string;
-    gamePrice: number;
+    name: string;
+    description: string;
+    developer: string;
+    publisher: string;
+    price: number;
 
-    constructor(gameId: number, gameName: string, gameDescription: string, gameDeveloper: string, gamePublisher: string, gamePrice: number){
-        this.gameId = gameId;
-        this.gameName = gameName;
-        this.gameDescription = gameDescription;
-        this.gameDeveloper = gameDeveloper;
-        this.gamePubliser = gamePublisher;
-        this.gamePrice = gamePrice;
+    constructor(gameName: string, gameDescription: string, gameDeveloper: string, gamePublisher: string, gamePrice: number){
+        this.name = gameName;
+        this.description = gameDescription;
+        this.developer = gameDeveloper;
+        this.publisher = gamePublisher;
+        this.price = gamePrice;
     }
 }

@@ -1,1 +1,13 @@
-<p>add-game works!</p>
+<div class="add-game-container">
+    <h1>Add a game</h1>
+    <form #addGame="ngForm" (ngSubmit)="addGameToDatabase(addGame.value)">
+        <input type="text" name="gameName" placeholder="Add here the name of the game" required ngModel>
+        <input type="text" name="gameDescription" placeholder="Add here the description of the game" required ngModel>
+        <input type="text" name="gameDeveloper" placeholder="Add here the developer of the game" required ngModel>
+        <input type="text" name="gamePublisher" placeholder="Add here the publisher of the game" required ngModel>
+        <input type="text" name="gamePrice" placeholder="Add here the price of the game" required ngModel>
+        <input type="submit"value="Add game">
+    </form>
+</div>
+
+<router-outlet></router-outlet>

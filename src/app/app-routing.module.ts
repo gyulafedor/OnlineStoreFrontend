@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AddGameComponent } from './add-game/add-game.component';
 import { CartComponent } from './cart/cart.component';
 import { CreateAccountComponent } from './create-account/create-account.component';
 import { GamesComponent } from './games/games.component';
@@ -26,6 +27,10 @@ const routes: Routes = [
   {
     path: "app-successful-order-page",
     component: SuccessfulOrderPageComponent
+  },
+  {
+    path: "app-add-game",
+    component: AddGameComponent
   }
 ];
 

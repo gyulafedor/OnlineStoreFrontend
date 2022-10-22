@@ -15,7 +15,7 @@ export class GamesComponent implements OnInit {dataSource: MatTableDataSource<Ga
   entries = [] as Array<Game>;
   allGamesUrl: string = environment.allGamesUrl;
 
-  processedColumns = ['gameName', 'gameDescription', 'gameDeveloper', 'gamePubliser', 'gamePrice', 'addToCart'];
+  processedColumns = ['name', 'description', 'developer', 'publisher', 'price', 'addToCart'];
 
   @ViewChild(MatSort, {static: true}) sort: MatSort;
   @ViewChild(MatPaginator, {static: true}) paginator: MatPaginator;
@@ -38,8 +38,8 @@ export class GamesComponent implements OnInit {dataSource: MatTableDataSource<Ga
         console.log(availableGames);
         for(var i = 0; i < availableGames.length; i++){
           var e = availableGames[i];
-          var processEntry = new Game(e.id, e.name, e.description, e.developer, e.publisher, e.price);
-          console.log("pe: " + processEntry.gameName);
+          var processEntry = new Game(e.name, e.description, e.developer, e.publisher, e.price);
+          console.log("pe: " + processEntry.name);
           this.entries.push(processEntry);
         }
         this.dataSource = new MatTableDataSource(this.entries);

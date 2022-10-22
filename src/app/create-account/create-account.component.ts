@@ -25,10 +25,5 @@ export class CreateAccountComponent implements OnInit {
     var newUser = new Users(user.userEmail, user.userName, user.userPassword);
     console.log(newUser);
     this.http.post<Users>(this.createUserUrl, newUser).subscribe();
-    //this.http.post<User>(this.createUserUrl, newUser);
-    /*this.http.get(this.allUsersUrl).subscribe(
-      (availableGames: any) => {
-        console.log(availableGames);
-  } )*/
-}
+  }
 }

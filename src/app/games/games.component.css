@@ -8,6 +8,11 @@ mat-table{
   display: flex;
 }
 
+table, th, td{
+  border: 1px solid gray;
+  border-collapse: collapse;
+}
+
 nav{
   background-color: aqua;
   height: 80px;
@@ -30,3 +35,13 @@ nav ul li a{
   font-size: 20px;
   text-transform: uppercase;
 }
+
+.mat-td-gamePubliser,
+.mat-td-gamePrice,
+.mat-td-gameDeveloper,
+.mat-td-addToCart{
+  text-align: center;
+  vertical-align: middle;
+  }
+
+
