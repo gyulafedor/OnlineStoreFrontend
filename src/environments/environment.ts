@@ -3,7 +3,11 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  allGamesUrl: "http://localhost:8080/games",
+  addUserUrl: "http://localhost:8080/users",
+  allUsersUrl: "http://localhost:8080/users",
+  getUserByIdUrl: "http://localhost:8080/users"
 };
 
 /*

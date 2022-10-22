@@ -1,0 +1,54 @@
+<mat-form-field appearance="standard">
+    <mat-label>Filter</mat-label>
+    <input matInput placeholder="Example: Cyberpunk..." (keyup)="applyFilter($event)">
+</mat-form-field>
+  
+<div>
+    <table mat-table [dataSource]="dataSource" matSort>
+  
+        <ng-container matColumnDef="gameId">
+          <th class="mat-header-gameId" mat-header-cell *matHeaderCellDef mat-sort-header>Game Id</th>
+          <td class="mat-td-gameId" mat-cell *matCellDef="let row">{{row.gameId}}</td>
+        </ng-container>
+  
+        <ng-container matColumnDef="gameName">
+          <th class="mat-header-gameName" mat-header-cell *matHeaderCellDef mat-sort-header>Game Name</th>
+          <td class="mat-td-gameName" mat-cell *matCellDef="let row">{{row.gameName}}</td>
+        </ng-container>
+  
+        <ng-container matColumnDef="gameDescription">
+          <th class="mat-header-gameDescription" mat-header-cell *matHeaderCellDef mat-sort-header>Game Description</th>
+          <td class="mat-td-gameDescription" mat-cell *matCellDef="let row">{{row.gameDescription}}</td>
+        </ng-container>
+  
+        <ng-container matColumnDef="gameDeveloper">
+          <th class="mat-header-gameDeveloper" mat-header-cell *matHeaderCellDef mat-sort-header>Game Developer</th>
+          <td class="mat-td-gameDeveloper" mat-cell *matCellDef="let row">{{row.gameDeveloper}}</td>
+        </ng-container>
+  
+        <ng-container matColumnDef="gamePubliser">
+          <th class="mat-header-gamePubliser" mat-header-cell *matHeaderCellDef mat-sort-header>Game Publisher</th>
+          <td class="mat-td-gamePubliser" mat-cell *matCellDef="let row">{{row.gamePubliser}}</td>
+        </ng-container>
+  
+        <ng-container matColumnDef="gamePrice">
+          <th class="mat-header-gamePrice" mat-header-cell *matHeaderCellDef mat-sort-header>Game Price</th>
+          <td class="mat-td-gamePrice" mat-cell *matCellDef="let row">{{row.gamePrice}}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="addToCart">
+          <th class="mat-header-addToCart" mat-header-cell *matHeaderCellDef mat-sort-header></th>
+          <td class="mat-td-addToCart" mat-cell *matCellDef="let row"><button mat-button (onClick)="loadCart()">Add to cart</button></td>
+        </ng-container>  
+        
+        <tr mat-header-row *matHeaderRowDef="processedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: processedColumns;"></tr>
+  
+    </table>
+  
+    <mat-paginator [length]=entries.length [pageSize]="5" [pageSizeOptions]="[5, 10, 25, 50]">
+        
+    </mat-paginator>
+</div>
+
+<router-outlet></router-outlet>

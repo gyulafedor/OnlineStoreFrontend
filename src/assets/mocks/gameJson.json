@@ -1,0 +1,34 @@
+[
+    {
+       "id":1,
+       "name":"Cyberpunk 2077",
+       "description":"Cyberpunk 2077 is an open-world, action-adventure story set in Night City, a megalopolis obsessed with power, glamour and body modification. You play as V, a mercenary outlaw going after a one-of-a-kind implant that is the key to immortality.",
+       "developer":"CD Projekt Red",
+       "publisher":"CD Projekt",
+       "price":30
+    },
+    {
+       "id":2,
+       "name":"The Witcher",
+       "description":"It is based on the book series of the same name by Polish writer Andrzej Sapkowski. The Witcher follows the story of Geralt of Rivia, a solitary monster hunter, who struggles to find his place in a world.",
+       "developer":"CD Projekt Red",
+       "publisher":"CD Projekt",
+       "price":10
+    },
+    {
+       "id":3,
+       "name":"The Witcher 2: Assassins of Kings",
+       "description":"Geralt has been essentially drafted as King Foltests personal bodyguard and the king is engaged in a battle with troops loyal to his mistress, the Baroness Mary Louisa La Valette after what can best be described as a lovers spat.",
+       "developer":"CD Projekt Red",
+       "publisher":"CD Projekt",
+       "price":15
+    },
+    {
+       "id":4,
+       "name":"The Witcher 3: Wild Hunt",
+       "description":"The Witcher 3: Wild Hunt is an action role-playing game with a third-person perspective. Players control Geralt of Rivia, a monster slayer known as a Witcher.",
+       "developer":"CD Projekt Red",
+       "publisher":"CD Projekt",
+       "price":20
+    }
+ ]

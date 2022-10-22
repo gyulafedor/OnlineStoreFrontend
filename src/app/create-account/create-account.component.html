@@ -1,0 +1,9 @@
+<div class="create-account-container">
+    <h1>Create an account</h1>
+    <form #accountForm="ngForm" (ngSubmit)="onCreateAccount(accountForm.value)">
+        <input type="text" name="userEmail" placeholder="Email address" required ngModel>
+        <input type="text" name="userName" placeholder="Name" required ngModel>
+        <input type="password" name="userPassword" placeholder="Password" required ngModel>
+        <input type="submit"value="Create account">
+    </form>
+</div>

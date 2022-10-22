@@ -1,0 +1,11 @@
+<div class="login-container">
+    <h1>Login</h1>
+    <form #loginForm="ngForm" (ngSubmit)="onLogin(loginForm.value)">
+            <input name="userEmail" type="text" placeholder="Email address" required ngModel>
+            <input name="userPassword" type="password" placeholder="Password" required ngModel>
+            <input type="submit" value="Login">
+    </form>
+
+</div>
+
+<router-outlet></router-outlet>
